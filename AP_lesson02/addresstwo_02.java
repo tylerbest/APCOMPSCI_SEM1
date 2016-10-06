@@ -1,4 +1,4 @@
-public class address_02
+public class addresstwo_02
 {
 	public static void main(String[]args)
 	{
