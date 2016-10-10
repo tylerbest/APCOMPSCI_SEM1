@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class cube_42
 {
-	static int side;
-	static int sa;
+	static int s;
+	static double sa;
 	
 	public static void main(String[]args)
 	{
@@ -11,15 +11,15 @@ public class cube_42
 		s = keyboard.nextInt();
 		
 		
-		print();
 		calcSurf();
+		print();
 	}
 	public static void calcSurf()
 	{
-		sa = 6 * math.pow s, 2;
+		sa = (6 * (s * s));
 	}
 	public static void print()
 	{
-		System.out.println("The surface area of a cube whose sides are " + s + "in length is " + sa);
+		System.out.println("The surface area of a cube whose sides are " + s + " inches in length is: " + sa );
 	}
 }
