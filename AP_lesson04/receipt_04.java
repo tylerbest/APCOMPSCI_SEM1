@@ -9,15 +9,15 @@ public class receipt_04
 		System.out.println("Please Enter item 1");
 		String itemone = keyboard.next();
 		System.out.println("Please Enter the price");
-		Double priceone = keyboard.nextDouble();
+		double priceone = keyboard.nextDouble();
 		System.out.println("Please Enter item 2");
 		String itemtwo = keyboard.next();
 		System.out.println("Please Enter the price");
-		Double pricetwo = keyboard.nextDouble();
+		double pricetwo = keyboard.nextDouble();
 		System.out.println("Please Enter item 3");
 		String itemthree = keyboard.next();
 		System.out.println("Please Enter the price");
-		Double pricethree = keyboard.nextDouble();
+		double pricethree = keyboard.nextDouble();
 		System.out.println("      *********_Receipt_*********");
 		
 		form.format(itemone, priceone);

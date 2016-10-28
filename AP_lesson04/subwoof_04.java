@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class subwoofer_04
+public class subwoof_04
 {
 	public static void main(String[]args)
 	{
-		subwoofer_04 form = new subwoofer_04();
+		subwoof_04 form = new subwoof_04();
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("Height:");
