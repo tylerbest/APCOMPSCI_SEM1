@@ -23,7 +23,7 @@ public class idcard_04
 		System.out.println("Enter your major");
 		String thingthree = keyboard.next();
 		
-		System.out.println("\n	******************");
+		System.out.println("\n    ******************");
 		form.format("*" + itemtwo, thingtwo + "*");
 		form.format("*" + itemone, thingone + "*");
 		form.format("*" + itemthree, thingthree + "*");

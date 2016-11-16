@@ -26,6 +26,6 @@ public class average_42
 	}
 	public static void print()
 	{
-		System.out.println("The average is " +  avg);
+		System.out.println("The average %2.0f, %2.0f, %2.0f, %3.5 " + num1, num2, num3, avg);
 	}
 }

@@ -1,23 +1,30 @@
 public class diceroll2
 {
+	static int player;
+	static int computer;
+	static String Winner;
+	
 	
 	public static void main(String[]args)
 	{
-		int player = (int)(Math.random()*7)+1;
-		int computer = (int)(Math.random()*7)+1;
+		player = (int)(Math.random()*7)+1;
+		computer = (int)(Math.random()*7)+1;
 		
-		String winner = winner;
+		rollDice();
+		
 		System.out.println("You rolled a " + player);
 		System.out.println("Computer rolled a " + computer);
-		System.ou.println("And the winner is " + winner); 
+		System.out.println("And the winner is " + winner); 
 	}
-	public static double diceRoll(int player, int computer)
+	public static void rollDice()
 	{	
-		String winner = "";
-		if(computer > player);
-			winner = player;
-		if(player < computer)
-			winner = computer;
-		return winner;
+		
+		if(player > computer);
+			  winner = player;
+		if(computer > player)
+			  winner = computer;
+		if (player == computer)
+			  winner = "What are the chances? It's a tie!";
+		 
 	}
 }
