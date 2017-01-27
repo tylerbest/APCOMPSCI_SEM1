@@ -6,7 +6,7 @@ public class findthezs
 	{
 		fillArray();
 		printArray();
-		System.out.println("\n\nOnly" + hasZs() + " contain(s) the letter z.");
+		System.out.println("\nOnly"+ hasZs() + " contain(s) the letter z.");
 	}
 
 	public static void fillArray()
@@ -39,8 +39,6 @@ public class findthezs
 		}
 		return z;
 	}
-
-
 }
 
 

@@ -11,7 +11,7 @@ public class lucky7
 		System.out.println("The luckiness gauge of your number is" + luck(number));
 
 	}
-	
+
 	public static int luck(int n)
 
 	{
