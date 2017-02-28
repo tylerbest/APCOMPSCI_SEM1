@@ -1,22 +1,22 @@
-public abstract class toyclass
+public abstract class toy
 {
 	private String name;
 	private int count;
-	public toyclass()
+	public toy()
 	{
 		this.name = "";
 		this.count = 1;
 	}
-	public toyclass(String n)
+	public toy(String n)
 	{
 		this.name = n;
 		this.count = 1;
 	}
-	public String getName();
+	public String getName()
 	{
 		return name;
 	}
-	public int getCount;
+	public int getCount()
 	{
 		return count;
 	}
@@ -29,9 +29,9 @@ public abstract class toyclass
 		this.name = n;
 	}
 	public abstract String getType();
-	public String toString();
+	public String toString()
 	{
-		return "There is" + count + "" + name;
+		return count + " " + name;
 	}
 }
 	

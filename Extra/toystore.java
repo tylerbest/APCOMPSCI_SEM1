@@ -1,30 +1,29 @@
-import java.util.Array;
+import java.util.Arrays;
 import java.util.ArrayList;
 
 public class toystore
 {
-	private ArrayList<toy>toyList;
-	private String toyCount;
+	public ArrayList <toy> toyList;
 	public toystore()
 	{
-		toyCount = "";
-		toyList = new ArrayList<toy>();
+	
+		toyList = new ArrayList<>();
 	}
 	public toystore(String t)
 	{
-		toyCount(t);
+		toyList = new ArrayList<>();
 		loadToys(t);
 		
 	}
-	public void loadToys(String ts)
+	public ArrayList <toy> loadToys(String ts)
 	{
-		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
-		toyList = new ArrayList<Toy>();
-		for(int i = 0; i <= toys.size()-1; i++)
+		ArrayList <String> toys = new ArrayList <String> (Arrays.asList(ts.split(", ")));
+		toyList = new ArrayList <toy>();
+		for(int i = 0; i < toys.size(); i+=2)
 		{
 			String name = toys.get(i); 
-			String type = toys.size (i + 1); 
-			Toy t = getThatToy(name);
+			String type = toys.get (i + 1); 
+			toy t = getThatToy(name);
 			if(t == null)
 			{
 				if(type.equals("Car"))
@@ -39,6 +38,7 @@ public class toystore
 			else
 				t.setCount(t.getCount() + 1);
 		}
+		return toyList;
 	}
 	
 	public toy getThatToy(String nm)
@@ -97,7 +97,7 @@ public class toystore
 	
 	public String toString()
 	{
-		return "" + toyList;
+		return toyList.toString();
 	}
 }
 	

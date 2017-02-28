@@ -2,16 +2,11 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class toyrunner
 {
-	public static void main(Strin[]args)
+	public static void main(String[]args)
 	{
-		ArrayList<Toys> inventory = new ArrayList<Toys>();
-		inventory.add(new Afigure("Bob"));
-		inventory.add(new car("911"));
-		
-		for (Toy n : inventory)
-		{
-			System.out.println(x);
-		
-		}
+		AFigure bob = new AFigure ("bob");
+		car koenig = new car ("koenig");
+		System.out.println(bob);
+		System.out.println(koenig);
 	}
 }
