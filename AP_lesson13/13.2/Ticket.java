@@ -1,4 +1,3 @@
-
 public abstract class Ticket
 {
 	private int serialNo;
@@ -13,6 +12,7 @@ public abstract class Ticket
 		return serialNo;
 	}
 	public abstract double getPrice();
+	
 	public String toString()
 	{
 		return ("Serial Number: " + getSerialNo() +
