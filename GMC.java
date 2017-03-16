@@ -1,13 +1,25 @@
+import java.util.Random;
 public class GMC
 {
-	private int serialNo;
-	
+	private double x, y;
 	public GMC()
 	{
-		serialNo = (int)(Math.random()*9999999)+1;
+		x = 0;
+		y = 0;
 	}
-	
-	public int getSerialNo()
+	public GMC(double 1x, double 1y)
 	{
-		return serialNo;
+		x = 1x;
+		y = 1y;
+	}	
+	public void move(double 1x, double 1y)
+	{
+		x += 1x;
+		y += 1y;
 	}
+	public double getLoc()
+	{
+		double location = (x,y);
+		return location;
+	}
+}
