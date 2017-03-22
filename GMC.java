@@ -1,7 +1,9 @@
 import java.util.Random;
-public class GMC
+public class GMC implements Location
 {
 	private double x, y;
+	private int ID;
+	
 	public GMC()
 	{
 		x = 0;
@@ -16,6 +18,14 @@ public class GMC
 	{
 		x += 1x;
 		y += 1y;
+	}
+	public int getID()
+	{
+		if(ID == 0)
+		{
+			ID = (int)(Math.random()*9999999) + 1;
+		}
+		return ID;
 	}
 	public double getLoc()
 	{
