@@ -1,20 +1,20 @@
 import java.util.Random;
-public class Honda implements Location
+public class GMC implements Location
 {
-	private double x, y; 
+	private double x, y;
 	private int ID;
-	private double [] location;
-	public Honda()
+	
+	public GMC()
 	{
 		x = 0;
 		y = 0;
 	}
-	public Honda(double X, double Y)
+	public GMC(double X, double Y)
 	{
 		x = X;
 		y = Y;
-	}
-	public void move (double X, double Y)
+	}	
+	public void move(double X, double Y)
 	{
 		x += X;
 		y += Y;
@@ -27,8 +27,9 @@ public class Honda implements Location
 		}
 		return ID;
 	}
-	public double[] getLoc()
+	public double getLoc()
 	{
+		double location = x, y;
 		return location;
 	}
 }

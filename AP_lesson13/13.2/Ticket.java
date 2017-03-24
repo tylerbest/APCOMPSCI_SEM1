@@ -6,7 +6,6 @@ public abstract class Ticket
 	{
 		serialNo = (int)(Math.random()*9999999)+1;
 	}
-	
 	public int getSerialNo()
 	{
 		return serialNo;

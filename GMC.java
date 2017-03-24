@@ -3,21 +3,21 @@ public class GMC implements Location
 {
 	private double x, y;
 	private int ID;
-	
+	private double [] location;
 	public GMC()
 	{
 		x = 0;
 		y = 0;
 	}
-	public GMC(double 1x, double 1y)
+	public GMC(double X, double Y)
 	{
-		x = 1x;
-		y = 1y;
+		x = X;
+		y = Y;
 	}	
-	public void move(double 1x, double 1y)
+	public void move(double X, double Y)
 	{
-		x += 1x;
-		y += 1y;
+		x += X;
+		y += Y;
 	}
 	public int getID()
 	{
@@ -27,9 +27,9 @@ public class GMC implements Location
 		}
 		return ID;
 	}
-	public double getLoc()
+	public double[] getLoc()
 	{
-		double location = (x,y);
+		double location = x, y;
 		return location;
 	}
 }
