@@ -14,10 +14,10 @@ public class GMC implements Location
 		x = X;
 		y = Y;
 	}	
-	public void move(double X, double Y)
+	public void move(double ex, double wy)
 	{
-		x += X;
-		y += Y;
+		x += ex;
+		y += wy;
 	}
 	public int getID()
 	{
@@ -29,8 +29,10 @@ public class GMC implements Location
 	}
 	public double[] getLoc()
 	{
+		double[]location = new double[2];
 		location[0] = x;
 		location[1] = y;
+		
 		return location;
 	}
 }
