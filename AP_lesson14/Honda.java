@@ -3,7 +3,7 @@ public class Honda implements Location
 {
 	private double x, y; 
 	private int ID;
-	private double [] location;
+	private double[] location;
 	public Honda()
 	{
 		x = 0;
