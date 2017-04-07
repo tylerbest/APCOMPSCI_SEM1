@@ -1,26 +1,23 @@
+import java.util.ArrayList;
+import java.lang.Math.*;
 public class gmc extends car
 {
 	private double xx, yy;
-	private int ID;
 	public gmc()
 	{
 		xx = 0;
 		yy = 0;
 	}
-	public gmc(int x,int y)
+	public gmc(double x,double y)
 	{
-		ID = (int)(Math.random()*1000000)+1;
+		super();
 		xx = x;
 		yy = y;
 	}
-	public int getID()
-	{
-		return ID;
-	}
 	public void move(double x,double y)
 	{
-		xx += x;
-		yy += y;
+		this.xx += x;
+		this.yy += y;
 	}
 	public double[] getLoc()
 	{

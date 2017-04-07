@@ -10,6 +10,7 @@ public class honda extends car
 	}
 	public honda(double[] l)
 	{
+		super();
 		ID = (int)(Math.random()*1000000)+1;
 		xx = l[0];
 		yy = l[0];
@@ -20,8 +21,8 @@ public class honda extends car
 	}
 	public void move(double x,double y)
 	{
-		xx += x;
-		yy += y;
+		this.xx += x;
+		this.yy += y;
 	}
 	public double[] getLoc()
 	{
