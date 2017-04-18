@@ -1,9 +1,15 @@
 public class gmc2 extends car2
 {
-	public gmc2(int x,int y)
+	private double[] location;
+	public gmc2(double x, double y)
+
 	{
-		super();
-		super.move(x, y);
+		location = new double[2];
+		location[0] = x;
+		location[1] = y;
 	}
+
 }
+
+
 

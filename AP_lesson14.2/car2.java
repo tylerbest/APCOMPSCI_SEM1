@@ -1,21 +1,34 @@
-public class car2 implements location2 
-{
+public abstract class car2 implements location2
 
-	private double[] Location = new double[2];
-	private double ID;
+{
+	int ID;
+	double x, y;
+	double[]location;
 	public car2()
 	{
-		ID = (int)(Math.random()*1000000)+1;
-		location = new double[2];
+		ID = 1 + (int)(Math.random()*999999);
 	}
 
-	public void move(double x, double y)
+	public void move(double r, double t)
+
 	{
-		Location[0] += x;
-		Location[1] += y;
+		x += r;
+		y += t;
 	}
+
+	public int getID()
+
+	{
+		return ID;
+	}
+
 	public double[] getLoc()
+
 	{
-		return Location;
+		double[] loc = new double[2];
+		loc[0] = x;
+		loc[1] = y;
+		return loc;
 	}
+
 }

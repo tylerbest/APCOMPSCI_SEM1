@@ -1,38 +1,28 @@
-import java.util.Random;
-public class GMC implements Location
+public class gmc extends car
 {
-	private double x, y;
-	private int ID;
-	private double [] location;
-	public GMC()
+	private double x;
+	private double y;
+	public gmc()
 	{
 		x = 0;
 		y = 0;
 	}
-	public GMC(double X, double Y)
+	public gmc(double ex, double wy)
 	{
-		x = X;
-		y = Y;
-	}	
+		x += ex;
+		y += wy;
+	}
 	public void move(double ex, double wy)
 	{
 		x += ex;
 		y += wy;
 	}
-	public int getID()
-	{
-		if(ID == 0)
-		{
-			ID = (int)(Math.random()*9999999) + 1;
-		}
-		return ID;
-	}
 	public double[] getLoc()
 	{
-		double[]location = new double[2];
-		location[0] = x;
-		location[1] = y;
-		
-		return location;
+		double[] loc = new double[] {x,y};
+		return loc;
+
 	}
+
 }
+

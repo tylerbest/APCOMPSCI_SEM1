@@ -1,97 +1,28 @@
 import java.util.ArrayList;
 public class satellite2
 {
+
   public static void main(String[]args)
+
   {
-      ArrayList<Location> locate = new ArrayList<>();
-      double[] honLoc = {5, 6};
-      locate.add(new honda(honLoc));
-      locate.add(new toyota("8, 9"));
-      locate.add(new GMC(3, 8));
+    ArrayList<location2> locate = new ArrayList<>();
+	   double[] honLoc = {5, 6};
+      locate.add(new honda2(honLoc));
+      locate.add(new toyota2("8, 9"));
+      locate.add(new gmc2(3, 8));
       double[] home = {0, 0};
-
-
-
-
-
-
-
-
-
-
-
-
       String printout = "\n\n" +
 
+              "==========================";
 
-              "==========================" + "\nStarting locations...";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      for (Location l : locate)
-
-
+      for (location2 l : locate)
       {
-
-
-          printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
-
-
+		   double xmove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
+		   double ymove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
+		   printout += "\nAfter " + l.getID() + " Moved (" + getLocation(l.getLoc()) + ")";
+          (l).move(xmove, ymove);
+		   printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n";
       }
-
-
-	    System.out.println( "\n\n" + "==========================");
-
-
-	   for (Location l : locate)
-
-
-	   {
-
-
-		   double x,y;
-
-
-		   x = (Math.random()*100)+1;
-
-
-		   y = (Math.random()*100)+1;
-
-
-		   System.out.println(" after " + l.getID() + "moved +(" + x + ", " + y + ")");
-
-
-		   l.move(x,y);
-
-
-		   System.out.println("New Location: ("+ getLocation(l.getLoc())+")\n");
-
-
-	   }
-
-
-
-
-
-
-
-
-
-
 
 
       printout += "\n\n" + "==========================" +
@@ -100,93 +31,26 @@ public class satellite2
                   "\nDistance from home...";
 
 
-
-
-
-
-
-
-
-
-
-
-      for (Location l : locate)
-
-
+      for (location2 l : locate)
       {
-
-
-          printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
-
-
+          printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home) + ")";
       }
-
-
-
-
-
-
-
-
-
-
-
 
       System.out.println(printout);
 
-
-	  
-
-
-	
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
 
   public static double getDistance(double[] car, double[] home)
 
-
   {
-
-
-      return Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
-
-
+      return Math.sqrt((Math.pow((car[0] - home[0]), 2)+ Math.pow(car[0] - home[1], 2)));
   }
-
-
-
-
-
-
-
-
-
-
-
-
   public static String getLocation(double[] loc)
-
-
   {
 
-
-      return loc[0]+ ", " + loc[1];
-
+      return loc[0] + " , " + loc[1];
 
   }
-
 
 }
 

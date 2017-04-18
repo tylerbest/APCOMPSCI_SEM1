@@ -1,11 +1,8 @@
 public class honda2 extends car2
 {
-	public honda(double[] l)
+	private double[] location;
+	public honda2 (double[] l)
 	{
-		super();
-		super.move(l[0], l[1]);
-
-	}
-
+		location = l;
+	}	
 }
-
