@@ -48,7 +48,7 @@ public class satellite
 				object.move(x,y);
 
 
-				printout += "\n==========================\nAfter " + object.getID() + " Moved(" + x + ", " + y + ")\nNew Location: " + Arrays.toString(object.getLoc());
+				printout += "\n==========================\nAfter " +"%$.2f" object.getID() + " Moved(" + x + ", " + y + ")\nNew Location: " + Arrays.toString(object.getLoc());
 
 
 			}
@@ -65,7 +65,7 @@ public class satellite
 				for (car l : locate)
 
 				{
-					printout += "\nDistance for " + l.getID() + ": (" + %1$.2f "getDistance(l.getLoc(), home)+ ")";
+					printout += "\nDistance for " + l.getID() + ": (" + %$.2f "getDistance(l.getLoc(), home)+ ")";
 
 				}
 				   System.out.println(printout);
