@@ -14,31 +14,44 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-
+		if (statement.string() == 0)
+		{
+			response = "say something, please.";
+		}
 		/** Exercise_01:
 		 * ==================================================
 		 * 	Code that asks the user "Say something, please."
 		 * 	if you enter nothing, or if you accidentally hit
 		 * 	enter. Think to yourself: "What is the length of
-		 * 	an empty String?" */
+		 * 	an empty String?" LENGTH IS 0*/
 
 
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		if (statement.indexOf("no") >= 0)
+		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
 		}
 
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if (findKeyword("mother") >= 0
+				|| findKeyword("father") >= 0
+				|| findKeyword("sister") >= 0
+				|| findKeyword("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
 		}
-
+		else if (findKeyword("cat") >= 0
+				|| findKeyword("dog") >= 0
+				|| findKeyword("fish") >= 0
+				|| findKeyword("turtle") >= 0)
+		{
+			response = "Tell me more about your pet";
+		}
+		else if (findKeyword("robinette") >= 0)
+		{
+			response = "Sounds like the dankest";
+		}
 		/** Exercise_03(Final)
 		 * ==================================================
 		 * Create additional code (another else if) that
