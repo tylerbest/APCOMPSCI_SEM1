@@ -32,7 +32,7 @@ public class satellite
 				for (car l : locate)
 
 				{
-					printout += "\nDistance for " + l.getID() + ":  + ("%$.2f" "getDistance(l.getLoc(), home)+ ")";
+					printout += "\nDistance for " + l.getID() + ":  + ("%$.2f", "getDistance(l.getLoc(), home)+ ")";
 
 				}
 				   System.out.println(printout);
