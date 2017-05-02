@@ -33,18 +33,21 @@ public class satellite2
 
       for (location2 l : locate)
       {
-          printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home) + ")";
-      }
-
+          
+		  printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home) + ")";
+		
+	  }
+	 
       System.out.println(printout);
-
+		
   }
 
   public static double getDistance(double[] car, double[] home)
 
   {
       return Math.sqrt((Math.pow((car[0] - home[0]), 2)+ Math.pow(car[0] - home[1], 2)));
-  }
+		
+ }
   public static String getLocation(double[] loc)
   {
 

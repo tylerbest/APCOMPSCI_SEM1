@@ -103,11 +103,11 @@ public class IntArrayWorker
 	  int count = 0;
 	  for(int[] rowArray : matrix)
 	  {
-		  for(in item : rowArray)
+		  for(int item : rowArray)
 		  {
-			  if(item==num)
+			  if(item == num)
 			  {
-				  count = count + l;
+				  count = count + item;
 			  }
 		  }
 	  }
@@ -118,7 +118,7 @@ public class IntArrayWorker
 	 int max = 0;
 	 for(int[] rowArray : matrix)
 	 {
-		 for(in item : rowArray)
+		 for(int item : rowArray)
 		 {
 			 if(item > max)
 				 max = item;
@@ -130,9 +130,9 @@ public class IntArrayWorker
  {
 	 int total = 0;
 	 for(int i = 0; i<matrix.length; i++)
-		(
+		{
 			total = total + matrix[i][col];
-		)
+		}
 		return total;
  }
 }
