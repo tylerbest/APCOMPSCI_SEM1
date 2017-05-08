@@ -13,9 +13,16 @@ public class satellite2
       double[] home = {0, 0};
       String printout = "\n\n" +
 
-              "==========================";
-
-      for (location2 l : locate)
+              "==========================" + "\nStarting locations...";
+		
+     for (location2 l : locate)
+      {
+          printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+     
+	  }
+	 
+	  printout += "\n\n" + "==========================";
+	 for (location2 l : locate)
       {
 		   double xmove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
 		   double ymove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
