@@ -16,7 +16,7 @@ public class Magpie2
 		String response = "";
 		if (statement.string() == 0)
 		{
-			response = "say something, please.";
+			response = "say something";
 		}
 		/** Exercise_01:
 		 * ==================================================
@@ -33,7 +33,8 @@ public class Magpie2
 		{
 			response = "Why so negative?";
 		}
-
+		/** should have added || findKeyword(statment, "father") >= 0*/
+		
 		else if (findKeyword("mother") >= 0
 				|| findKeyword("father") >= 0
 				|| findKeyword("sister") >= 0
@@ -74,6 +75,31 @@ public class Magpie2
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
 	{
+		String phrase = statement.trim().toLowerCase();
+		goal = goal.toLowerCase();
+       
+	   String before = "";
+        String after = "";
+		
+		int psn = phrase.indexOf(goal, startPos);
+		{
+			
+			if (phrase.length() > psn + goal.length() + 1)
+
+			{
+				after = phrase.substring(psn + goal.length);
+			}
+			
+			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0))
+					&& ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))
+			{
+				return psn;
+			}
+			else
+			psn = phrase.indexOf(goal, psn + 1);
+		}
+
+		
 		/* New String variable phrase = a more searchable version of statement.
 		 	-Use a combination of trim() and toLowerCase() modify statement.
 
@@ -111,7 +137,7 @@ public class Magpie2
 	private int findKeyword(String statement, String goal)
 	{
 		//set startPos to 0 if not specified
-		return findKeyword(statement, goal, 0);
+		return findKeyword(statement,goal, 0);
 	}
 
 	/** getRandomResponse() method
@@ -135,5 +161,6 @@ public class Magpie2
 			response = "You don't say.";
 
 		return response;
+		
 	}
 }
