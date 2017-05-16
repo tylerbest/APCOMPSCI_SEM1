@@ -69,7 +69,7 @@ public class MagpiePart2
 				response = transformYouMeStatement(statement);
 			}
 			
-			else if(psn >= 0 && findKeyword(statement, "I", 0) >= 0)
+			else if(psn >= 0 && findKeyword(statement, "Me", 0) >= 0)
 			
 			{
 				response = transformIYouStatement(statement);
@@ -86,23 +86,26 @@ public class MagpiePart2
 	private String transformIWantToStatement(String statement)
 	{
 		String phrase = statement.trim().toLowerCase();
-		
 		String lastChar = phrase.substring(phrase.length() - 1);
-		if(lastChar.equals("."))
+		
+			if(lastChar.equals("."))
 		{
+			
 			statement = statement.substring(0, statement.length() - 1);
+		
 		}
 		int psn = findKeyword(statement, "I want to", statement.toLowerCase().indexOf("i want to"));
-		
-		String restOfStatement = statement.substring(psn + 10);
-		
+		String restOfStatement = statement.substring(psn + 9);
 		return "What would it mean to " + restOfStatement + "?";
 	}
+	
 	private String transformYouMeStatement(String statement)
+	
 	{
 		String phrase = statement.trim().toLowerCase();
 		
 		String lastChar = phrase.substring(phrase.length() - 1);
+		
 		if(lastChar.equals("."))
 		{
 			statement = statement.substring(0, statement.length() - 1);
@@ -111,18 +114,20 @@ public class MagpiePart2
 		int psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
 		
 		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe);
-		
 		return "What makes you think that I" + restOfStatement + "you?";
 	}
+	
 	private String transformIYouStatement(String statement)
+	
 	{
 		String phrase = statement.trim().toLowerCase();
-		
 		String lastChar = phrase.substring(phrase.length() - 1);
 		
 		if(lastChar.equals("."))
 		{
+		
 			statement = statement.substring(0, statement.length() - 1);
+		
 		}
 		int psnOfI = findKeyword(statement, "I");
 		int psnOfYou = findKeyword(statement, "You", psnOfI);
@@ -131,9 +136,5 @@ public class MagpiePart2
 		
 		return "Why do you" + restOfStatement + "me?";
 	}
-
-
-
-
 
 }
