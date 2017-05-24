@@ -415,15 +415,9 @@ public void copy(Picture fromPic,
      for (int row = 0;
           row < pixels.length-1; row++)
      {
-       topPixel = pixels[row][col];
-       bottomPixel = pixels[row+1][col];
-       bottomColor = bottomPixel.getColor();
-       if (topPixel.colorDistance(bottomColor) >
-           edgeDist)
-         topPixel.setColor(Color.BLACK);
-       else
-         topPixel.setColor(Color.WHITE);
-     }
+
+     AHHHHHHHHHHHHHHHHHHHHHHh
+	 }
    }
  }
   
