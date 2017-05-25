@@ -24,8 +24,8 @@ public class satellite2
 	  printout += "\n\n" + "==========================";
 	 for (location2 l : locate)
       {
-		   double xmove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
-		   double ymove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
+		   double xmove = Math.random()*100;
+		   double ymove = Math.random()*100;
 		   printout += "\nAfter " + l.getID() + " Moved (" + getLocation(l.getLoc()) + ")";
           (l).move(xmove, ymove);
 		   printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n";
@@ -53,12 +53,12 @@ public class satellite2
 
   {
       return Math.sqrt((Math.pow((car[0] - home[0]), 2)+ Math.pow(car[0] - home[1], 2)));
-		
+	  
  }
   public static String getLocation(double[] loc)
   {
-
-      return loc[0] + " , " + loc[1];
+	 
+      return String.format("%.2f %.2f", loc[0] , loc[1]);
 
   }
 
