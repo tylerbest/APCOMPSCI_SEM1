@@ -416,7 +416,7 @@ public void copy(Picture fromPic,
           row < pixels.length-1; row++)
      {
 
-     AHHHHHHHHHHHHHHHHHHHHHHh
+     //AHHHHHHHHHHHHHHHHHHHHHHh
 	 }
    }
  }
