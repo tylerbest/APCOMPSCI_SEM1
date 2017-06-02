@@ -247,10 +247,8 @@ public void mirrorHorizontalBotToTop()
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
     
-    // loop through the rows
     for (int row = 27; row < 97; row++)
     {
-      // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
         
@@ -394,7 +392,9 @@ public void copy(Picture fromPic,
     Pixel[][] pixels = this.getPixels2D();
     Color rightColor = null;
     for (int row = 0; row < pixels.length; row++)
-    {
+   //kept putting the top/bottom stuff up here for some reason im stoopid
+
+	{
       for (int col = 0; 
            col < pixels[0].length-1; col++)
       {
@@ -408,6 +408,9 @@ public void copy(Picture fromPic,
           leftPixel.setColor(Color.WHITE);
       }
     }
+  Pixel topPixel = null;
+  Pixel bottomPixel = null;
+  Color bottomColor = null;
   
   for (int col = 0; col < pixels[0].length; col++)
   
@@ -416,7 +419,13 @@ public void copy(Picture fromPic,
           row < pixels.length-1; row++)
      {
 
-     //AHHHHHHHHHHHHHHHHHHHHHHh
+    topPixel = pixels[row][col];
+	bottomPixel = pixels[row+1][col];
+	bottomColor = bottomPixel.getColor();
+	if(topPixel.colorDistance(bottomColor)> edgeDist)
+		topPixel.setColor(Color.BLACK);
+	else
+		leftPixel.setColor(Color.WHITE);
 	 }
    }
  }
