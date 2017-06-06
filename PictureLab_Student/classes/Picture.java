@@ -367,16 +367,16 @@ public void copy(Picture fromPic,
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
-    Picture flower1 = new Picture("flower1.jpg");
-    Picture flower2 = new Picture("flower2.jpg");
-    this.copy(flower1,0,0);
-    this.copy(flower2,100,0);
-    this.copy(flower1,200,0);
-    Picture flowerNoBlue = new Picture(flower2);
+    Picture download = new Picture("download.jpg");
+    Picture barbaraS = new Picture("barbaraS.jpg");
+    this.copy(download,0,0);
+    this.copy(barbaraS,100,0);
+    this.copy(download,200,0);
+    Picture flowerNoBlue = new Picture(barbaraS);
     flowerNoBlue.zeroBlue();
     this.copy(flowerNoBlue,300,0);
-    this.copy(flower1,400,0);
-    this.copy(flower2,500,0);
+    this.copy(download,400,0);
+    this.copy(barbaraS,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
   }
@@ -392,7 +392,7 @@ public void copy(Picture fromPic,
     Pixel[][] pixels = this.getPixels2D();
     Color rightColor = null;
     for (int row = 0; row < pixels.length; row++)
-   //kept putting the top/bottom stuff up here for some reason im stoopid
+   //kept putting the top/bottom null stuff up here for some reason im stoopid
 
 	{
       for (int col = 0; 
