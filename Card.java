@@ -91,7 +91,7 @@ public class Card {
 	@Override
 	public String toString()
 	{
-		return "Boom..." + rank + " of " + suit + " (point value = " + pointValue + ")";
+		return rank + " of " + suit + " (point value = " + pointValue + ")";
 	}
 }
  

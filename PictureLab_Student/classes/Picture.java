@@ -372,9 +372,9 @@ public void copy(Picture fromPic,
     this.copy(download,0,0);
     this.copy(barbaraS,100,0);
     this.copy(download,200,0);
-    Picture flowerNoBlue = new Picture(barbaraS);
-    flowerNoBlue.zeroBlue();
-    this.copy(flowerNoBlue,300,0);
+    Picture barbaraNoBlue = new Picture(barbaraS);
+    barbaraNoBlue.zeroBlue();
+    this.copy(barbaraNoBlue,300,0);
     this.copy(download,400,0);
     this.copy(barbaraS,500,0);
     this.mirrorVertical();
